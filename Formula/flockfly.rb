@@ -1,25 +1,25 @@
 class Flockfly < Formula
   desc "Flockfly context router CLI"
   homepage "https://github.com/flockfly/cli"
-  version "0.1.0"
+  version "0.2.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/flockfly/cli/releases/download/v0.1.0/flockfly-aarch64-apple-darwin.tar.xz"
-      sha256 "f1980fc9a47cb78a4a8864d53ca4a1398283554cd9a315caf95241d7e7445225"
+      url "https://github.com/flockfly/cli/releases/download/v0.2.0/flockfly-aarch64-apple-darwin.tar.xz"
+      sha256 "504b7aab641da09ead05d3ae2a5d673ec6a7e0f859b6b8b4de9595ee8fc69801"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/flockfly/cli/releases/download/v0.1.0/flockfly-x86_64-apple-darwin.tar.xz"
-      sha256 "59933257cd5400e4eaef0b8e2499ba65d5f2c19b5655ef1ce8012003b9a5d890"
+      url "https://github.com/flockfly/cli/releases/download/v0.2.0/flockfly-x86_64-apple-darwin.tar.xz"
+      sha256 "1853e438b60eaf1acecf895dd2e59e50a1cfac546cbd4ae8a878b69acb38a46f"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/flockfly/cli/releases/download/v0.1.0/flockfly-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "1d23798b2d427a3a26c0f2c37d9ddb6feb164d62a04663eb90f53b4e642f3b6e"
+      url "https://github.com/flockfly/cli/releases/download/v0.2.0/flockfly-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "843d9f5853a0bafe097c4f83286ff7f9cc7c6c494620903339b81ca57417a996"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/flockfly/cli/releases/download/v0.1.0/flockfly-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "914eab708eac99b170e1ead27f3330e48a535ebbef533d6c07b384b327f4a9d7"
+      url "https://github.com/flockfly/cli/releases/download/v0.2.0/flockfly-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "d37b25926995c0fa90b2c6ba76ade482b781bac2d1547bc1630ff0f899f83d47"
     end
   end
   license "MIT"
