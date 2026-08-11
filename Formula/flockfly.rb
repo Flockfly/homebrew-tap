@@ -1,25 +1,25 @@
 class Flockfly < Formula
   desc "Flockfly context router CLI"
   homepage "https://github.com/flockfly/cli"
-  version "0.5.0"
+  version "0.6.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/flockfly/cli/releases/download/v0.5.0/flockfly-aarch64-apple-darwin.tar.xz"
-      sha256 "a75bf16472decfc423443f826509f53f6707b94639282e1d6eabe3e1a95761ee"
+      url "https://github.com/flockfly/cli/releases/download/v0.6.0/flockfly-aarch64-apple-darwin.tar.xz"
+      sha256 "1b89b6be6a7f47e4c9a6630142ea0bfedb66a7a3477cb90fa1f9d857ac464e19"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/flockfly/cli/releases/download/v0.5.0/flockfly-x86_64-apple-darwin.tar.xz"
-      sha256 "693135363a38a4bce9abc70f1c1bf05c129b72ac68f3cb2c2415d888d3707979"
+      url "https://github.com/flockfly/cli/releases/download/v0.6.0/flockfly-x86_64-apple-darwin.tar.xz"
+      sha256 "dbaccbd16cc87bdbb90704ed423b99da26a06e8e675dc5fa50978a7d76b8f1c0"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/flockfly/cli/releases/download/v0.5.0/flockfly-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "17df4de69cc47aff2731aa81bb2e38f167c3ae4c511b25060173044b38c78e14"
+      url "https://github.com/flockfly/cli/releases/download/v0.6.0/flockfly-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "93db163b7d4f04c491d924d02f6998092749d3b1588a23170baa97e092565d1c"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/flockfly/cli/releases/download/v0.5.0/flockfly-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "35748da8ad96edde6d71b18f2a69ec9db8eec21ec1857e9f5103f37f1da82554"
+      url "https://github.com/flockfly/cli/releases/download/v0.6.0/flockfly-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "574d542afb8975f641e934a0251c084dda811b67cdf932461ed439a84bc56995"
     end
   end
   license "MIT"
@@ -51,10 +51,18 @@ class Flockfly < Formula
   end
 
   def install
-    bin.install "flockfly" if OS.mac? && Hardware::CPU.arm?
-    bin.install "flockfly" if OS.mac? && Hardware::CPU.intel?
-    bin.install "flockfly" if OS.linux? && Hardware::CPU.arm?
-    bin.install "flockfly" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "flockfly"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "flockfly"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "flockfly"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "flockfly"
+    end
 
     install_binary_aliases!
 
